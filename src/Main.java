@@ -47,6 +47,9 @@ public class Main {
                     System.out.println("Result: " + Convert.binaryToDecimal(binary));
                     return;
                 case (5):
+                    System.out.print("Insert the hexadecimal value: ");
+                    hex = sc.next().toUpperCase();
+                    System.out.println("Result: " + Convert.hexToBinary(hex));
                     return;
                 case (6):
                     System.out.print("Insert the hexadecimal value: ");
