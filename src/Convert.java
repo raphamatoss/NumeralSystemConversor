@@ -53,8 +53,10 @@ public class Convert {
         }
     }
 
-    static String binaryToHex(String binary) { // missing implementation
-        return binary;
+    static String binaryToHex(String binary) {
+        int decimal = binaryToDecimal(binary);
+        String hex = decimalToHex(decimal);
+        return hex;
     }
 
     static int binaryToDecimal(String binary) {
