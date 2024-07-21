@@ -18,8 +18,10 @@ public class Main {
         System.out.print("Insert your option: ");
         int option = sc.nextInt();
 
+
+        int decimal;
+        String binary;
         do {
-            int decimal;
             switch (option) {
                 case (0):
                     System.out.println("Finishing the program...");
@@ -27,23 +29,29 @@ public class Main {
                 case (1):
                     System.out.print("Insert the decimal value: ");
                     decimal = sc.nextInt();
-                    System.out.println("Resultado: " + Convert.decimalToBinary(decimal));
+                    System.out.println("Result: " + Convert.decimalToBinary(decimal));
                     return;
                 case (2):
                     System.out.print("Insert the decimal value: ");
                     decimal = sc.nextInt();
-                    System.out.println("Resultado: " + Convert.decimalToHex(decimal));
+                    System.out.println("Result: " + Convert.decimalToHex(decimal));
                     return;
                 case (3):
+                    System.out.print("Insert the binary value: ");
+                    binary = sc.next();
+                    System.out.println("Result: " + Convert.binaryToHex(binary));
                     return;
                 case (4):
+                    System.out.print("Insert the binary value: ");
+                    binary = sc.next();
+                    System.out.println("Result: " + Convert.binaryToDecimal(binary));
                     return;
                 case (5):
                     return;
                 case (6):
                     return;
                 default:
-                    System.out.println("Invalid value! Insert an option again: ");
+                    System.out.print("Invalid value! Insert an option again: ");
                     option = sc.nextInt();
                     break;
             }

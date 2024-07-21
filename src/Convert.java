@@ -53,4 +53,20 @@ public class Convert {
         }
     }
 
+    static String binaryToHex(String binary) { // missing implementation
+        return binary;
+    }
+
+    static int binaryToDecimal(String binary) {
+        int sum = 0;
+        for (int i = 1; i <= binary.length(); i++) {
+            int aux = Character.getNumericValue(binary.charAt(i-1));
+            sum += (int) (aux * Math.pow(2, binary.length()-i));
+        }
+        return sum;
+    }
+
+    static int hexToDecimal(String hex) { // missing implementation
+        return 1;
+    }
 }
