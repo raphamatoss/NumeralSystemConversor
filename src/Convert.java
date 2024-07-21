@@ -66,7 +66,27 @@ public class Convert {
         return sum;
     }
 
-    static int hexToDecimal(String hex) { // missing implementation
-        return 1;
+    static int hexToDecimal(String hex) {
+        int decimal;
+        if (hex.length() == 1) {
+            decimal = Character.getNumericValue(hex.charAt(0));
+            return decimal;
+        }
+        else {
+            int sum = 0;
+            for (int i = 1; i <= hex.length(); i++) {
+                int ascii = (int) hex.charAt(i-1);
+                int baseSixteen = (int) Math.pow(16, hex.length()-i);
+
+                if (ascii >= 48 && ascii <= 57) {
+                    sum += ((ascii-48) * baseSixteen);
+                }
+                else {
+                    sum += ((ascii-55) * baseSixteen);
+                }
+            }
+            decimal = sum;
+            return decimal;
+        }
     }
 }

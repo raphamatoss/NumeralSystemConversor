@@ -20,7 +20,7 @@ public class Main {
 
 
         int decimal;
-        String binary;
+        String binary, hex;
         do {
             switch (option) {
                 case (0):
@@ -49,6 +49,9 @@ public class Main {
                 case (5):
                     return;
                 case (6):
+                    System.out.print("Insert the hexadecimal value: ");
+                    hex = sc.next().toUpperCase();
+                    System.out.println("Result: " + Convert.hexToDecimal(hex));
                     return;
                 default:
                     System.out.print("Invalid value! Insert an option again: ");
